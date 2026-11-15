@@ -1,0 +1,285 @@
+
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  color: #182230;
+  background: #f5f7fb;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 28px 18px;
+  background: #111c2e;
+  color: white;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 10px 38px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 12px;
+  background: #3978ed;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand small {
+  margin-top: 3px;
+  color: #93a4bd;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.navigation {
+  display: grid;
+  gap: 9px;
+}
+
+.nav-label {
+  padding: 0 12px 8px;
+  color: #8292aa;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.nav-item {
+  padding: 12px;
+  border-radius: 9px;
+  color: #c2ccda;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nav-item.active {
+  background: #243958;
+  color: white;
+}
+
+.sidebar-footer {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding: 14px 10px;
+  color: #a9b7c9;
+  font-size: 12px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e7a83e;
+}
+
+.main-content {
+  min-height: 100vh;
+  margin-left: 250px;
+  padding: 0 48px;
+}
+
+.topbar {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e7ebf1;
+  color: #758195;
+  font-size: 13px;
+}
+
+.environment {
+  padding: 7px 10px;
+  border: 1px solid #dce5f2;
+  border-radius: 20px;
+  color: #55719a;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.page-heading {
+  padding: 42px 0 28px;
+}
+
+.eyebrow {
+  color: #3978ed;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.subtitle,
+.section-heading p {
+  color: #778397;
+  font-size: 14px;
+}
+
+.welcome-card {
+  display: flex;
+  min-height: 220px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 34px 40px;
+  border-radius: 16px;
+  background: linear-gradient(115deg, #172b49, #28548c);
+  color: white;
+}
+
+.welcome-tag {
+  color: #a9c9ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.welcome-card h2 {
+  margin: 14px 0 10px;
+  font-size: 28px;
+}
+
+.welcome-card p {
+  max-width: 590px;
+  color: #d0dced;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.welcome-icon {
+  display: grid;
+  width: 112px;
+  height: 112px;
+  flex: 0 0 112px;
+  place-items: center;
+  border: 1px solid #ffffff35;
+  border-radius: 28px;
+  background: #ffffff12;
+  font-size: 58px;
+  font-weight: 800;
+}
+
+.section {
+  margin-top: 42px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.empty-state {
+  display: flex;
+  min-height: 245px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 28px;
+  border: 1px dashed #d6deea;
+  border-radius: 14px;
+  background: white;
+  text-align: center;
+}
+
+.empty-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 14px;
+  background: #edf3ff;
+  color: #3978ed;
+  font-size: 28px;
+}
+
+.empty-state h3 {
+  margin: 16px 0 8px;
+}
+
+.empty-state p {
+  max-width: 480px;
+  color: #8792a3;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.page-footer {
+  padding: 34px 0 24px;
+  color: #9aa4b2;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .brand {
+    padding-bottom: 18px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  .welcome-card {
+    padding: 26px;
+  }
+
+  .welcome-icon {
+    display: none;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
