@@ -1,25 +1,86 @@
-# ftx-customers-portal
 
-> customers bounded context: web UI (remote)
+# Customers Portal
 
-Part of the **LMS Library** distributed system — team `lms-library`, Grupo 2.
-Governance and documentation live in [`library-docs`](https://github.com/code-corhuila/library-docs).
+Frontend del contexto de clientes. Este repositorio contiene la interfaz web del dominio de clientes y está construido con React, JavaScript y Vite.
 
-## Branching
+## Estado del proyecto
 
-Three permanent branches. **None of them accepts a direct commit** — you enter through a child
-branch and leave through a Pull Request.
+Actualmente se encuentra implementada la estructura visual inicial del portal.
 
+Las funcionalidades que dependan de servicios externos se incorporarán cuando estén definidos y aprobados los contratos de integración.
+
+## Tecnologías
+
+- React 19
+- JavaScript
+- Vite
+- ESLint
+- CSS
+
+## Requisitos
+
+- Node.js 22
+- npm
+
+## Instalación
+
+```bash
+npm ci
 ```
-develop  <--PR--  feat/... fix/... chore/...
-qa       <--PR--  qa/...
-main     <--PR--  release/...  hotfix/...
+
+## Desarrollo
+
+```bash
+npm run dev
 ```
 
-Promotion happens **by re-application** (`git cherry-pick -x`), never by merging one permanent
-branch into another: `merge develop -> qa` and `merge qa -> main` do not exist in this model.
+## Validaciones
 
-`main` requires **1 approval from `ariel5253`**. On `develop` and `qa` the team sets its own review
-rule.
+Ejecutar ESLint:
 
-Full policy: `00-governance/branching-policy.md` in `library-docs`.
+```bash
+npm run lint
+```
+
+Generar compilación de producción:
+
+```bash
+npm run build
+```
+
+Vista previa de producción:
+
+```bash
+npm run preview
+```
+
+## Integración
+
+Este portal corresponde a la interfaz del contexto de clientes.
+
+La composición de portales, la sesión, la autenticación y el cliente HTTP compartido corresponden al frontend principal. Este repositorio no debe conectarse directamente a bases de datos ni inventar endpoints o contratos de servicios.
+
+## Estructura
+
+```text
+src/
+├── assets/
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+
+public/
+.github/
+```
+
+## Flujo de trabajo Git
+
+- Las tareas se desarrollan en ramas `feat/`, `fix/` o `chore/`.
+- Los cambios se integran a `develop` mediante Pull Request.
+- Las promociones a `qa` y `main` siguen la política de ramas del proyecto.
+- No se realizan commits directamente sobre ramas permanentes.
+
+## Estado
+
+Fundación visual inicial. La integración funcional queda pendiente de los contratos oficiales del sistema.
